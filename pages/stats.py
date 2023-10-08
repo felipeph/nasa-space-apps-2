@@ -84,12 +84,13 @@ df_state = df_state.sort_values(by='num_ocorrencias', ascending=True)
 fig_state = px.bar(df_state, x='num_ocorrencias', y='estado', orientation='h', 
              title='Wildfires by State',
              labels={'num_ocorrencias': 'Number of Wildfires', 'estado': 'State'},
+             color_discrete_sequence=['#8B0000'],
              )
 
 fig_state.update_layout(height=700)
 
 
-tab_states, tab_cities = st.tabs(["States", "Cities"])
+tab_states, tab_cities = st.tabs(["States", "Top 10 Cities"])
 
 with tab_states:
     st.plotly_chart(fig_state, use_container_width=True)
@@ -98,12 +99,14 @@ df_cities = df.groupby('municipio').size().reset_index(name='num_ocorrencias')
 
 df_cities = df_cities.sort_values(by='num_ocorrencias', ascending=True)
 
+df_cities = df_cities.tail(10)
+
 #st.write(df_state)
 
 fig_cities = px.bar(df_cities, x='num_ocorrencias', y='municipio', orientation='h', 
              title='Wildfires by City',
              labels={'num_ocorrencias': 'Number of Wildfires', 'municipio': 'City'},
-             )
+             color_discrete_sequence=['#8B0000'],)
 
 fig_cities.update_layout(height=700)
 
