@@ -1,10 +1,10 @@
 import streamlit as st
-from datetime import datetime
+from datetime import datetime, timedelta
 import folium
 from folium.plugins import HeatMap
 import pandas as pd
 from streamlit_folium import st_folium
-
+import pytz
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -26,13 +26,20 @@ def load_date_csv(date):
 RADIUS = 2
 BLUR = 1
 
-params = st.experimental_get_query_params()
+timezone_brazil = pytz.timezone('America/Sao_Paulo')
 
-date_input = params["date"][0]
 
-date_obj = datetime.strptime(date_input, "%d/%m/%Y")
+#params = st.experimental_get_query_params()
+#st.write(params)
 
-date = date_obj.strftime("%Y-%m-%d")
+today = datetime.now(timezone_brazil)
+interval = timedelta(days=30)
+first_day = today - interval
+
+select_date = st.container()
+
+with select_date:
+    date = st.date_input('Escolha o Dia de Análise dos Focos', min_value=first_day, max_value=today)
 
 
 df = load_date_csv(date)
