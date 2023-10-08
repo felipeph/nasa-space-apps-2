@@ -36,10 +36,21 @@ today = datetime.now(timezone_brazil)
 interval = timedelta(days=30)
 first_day = today - interval
 
+st.markdown("""
+            <style>
+                div[data-testid="collapsedControl"] {
+            display: none
+    }
+</style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 select_date = st.container()
 
 with select_date:
-    date = st.date_input('Escolha o Dia de Análise dos Focos', min_value=first_day, max_value=today)
+    date = st.date_input('Select a date', min_value=first_day, max_value=today)
 
 
 df = load_date_csv(date)
