@@ -7,6 +7,7 @@ import pandas as pd
 from streamlit_folium import st_folium
 from datetime import datetime, timedelta
 import pytz
+import plotly.express as px
 
 # Config to correct https verification
 import ssl
@@ -70,51 +71,101 @@ if marked_states:
         dfs_list.append(df[mask])
     df = pd.concat(dfs_list, axis=0)
 
-mean_lat = df['lat'].mean()
-mean_lon = df['lon'].mean()
+#st.write(states_list)
 
-# Map Creation
-map = folium.Map(location=[mean_lat, mean_lon], zoom_start=4)
+#st.write(df)
 
-heatmap_data = df[['lat', 'lon']].values
-heatmap = HeatMap(heatmap_data, radius=radius, blur=blur).add_to(map)
-fastmarker = FastMarkerCluster(heatmap_data).add_to(map)
+df_state = df.groupby('estado').size().reset_index(name='num_ocorrencias')
 
+df_state = df_state.sort_values(by='num_ocorrencias', ascending=True)
 
-@st.cache_data
-def read_shape_files():
-    shp_states = gpd.read_file(r'data/shapes/BR_UF_2022.shp', encoding='utf-8')
-    shp_states.crs = "EPSG:4326"
-    return shp_states
+#st.write(df_state)
 
+fig_state = px.bar(df_state, x='num_ocorrencias', y='estado', orientation='h', 
+             title='Wildfires by State',
+             labels={'num_ocorrencias': 'Number of Wildfires', 'estado': 'State'},
+             )
 
-def title_without_middlearticles(name):
-    name = name.split(' ')
-    exceptions = ['DA', 'DE', 'DO']
-    newtitle = ''
-    for i in name:
-        if i in exceptions:
-            newtitle += i.lower()
-        else:
-            newtitle += i.title()
-        newtitle += ' '
-    return newtitle[:len(newtitle) - 1]
+fig_state.update_layout(height=700)
 
 
-shp_states = read_shape_files()
-if marked_states:
-    for state in marked_states:
-        mask = shp_states['NM_UF'] == title_without_middlearticles(state)
-        info_state = folium.features.GeoJson(
-            data=shp_states[mask]['geometry'],
-            style_function=lambda feature:
-            {
-                'color': 'blue',
-                'weight': 2
-            }
-        )
-        folium.Popup(f'{state}\n'
-                     f'Number of Incidents: {df["estado"].value_counts()[state]}\n').add_to(info_state)
-        info_state.add_to(map)
+tab_states, tab_cities = st.tabs(["States", "Cities"])
 
-day_map = st_folium(fig=map, use_container_width=True)
+with tab_states:
+    st.plotly_chart(fig_state, use_container_width=True)
+
+df_cities = df.groupby('municipio').size().reset_index(name='num_ocorrencias')
+
+df_cities = df_cities.sort_values(by='num_ocorrencias', ascending=True)
+
+#st.write(df_state)
+
+fig_cities = px.bar(df_cities, x='num_ocorrencias', y='municipio', orientation='h', 
+             title='Wildfires by City',
+             labels={'num_ocorrencias': 'Number of Wildfires', 'municipio': 'City'},
+             )
+
+fig_cities.update_layout(height=700)
+
+
+
+with tab_cities:
+    st.plotly_chart(fig_cities, use_container_width=True)
+    
+df_county = df.groupby('municipio').size().reset_index(name='num_ocorrencias')
+
+st.write(df_county)
+
+
+
+
+
+
+# mean_lat = df['lat'].mean()
+# mean_lon = df['lon'].mean()
+
+# # Map Creation
+# map = folium.Map(location=[mean_lat, mean_lon], zoom_start=4)
+
+# heatmap_data = df[['lat', 'lon']].values
+# heatmap = HeatMap(heatmap_data, radius=radius, blur=blur).add_to(map)
+# fastmarker = FastMarkerCluster(heatmap_data).add_to(map)
+
+
+# @st.cache_data
+# def read_shape_files():
+#     shp_states = gpd.read_file(r'data/shapes/BR_UF_2022.shp', encoding='utf-8')
+#     shp_states.crs = "EPSG:4326"
+#     return shp_states
+
+
+# def title_without_middlearticles(name):
+#     name = name.split(' ')
+#     exceptions = ['DA', 'DE', 'DO']
+#     newtitle = ''
+#     for i in name:
+#         if i in exceptions:
+#             newtitle += i.lower()
+#         else:
+#             newtitle += i.title()
+#         newtitle += ' '
+#     return newtitle[:len(newtitle) - 1]
+
+
+# shp_states = read_shape_files()
+# if marked_states:
+#     for state in marked_states:
+#         mask = shp_states['NM_UF'] == title_without_middlearticles(state)
+#         info_state = folium.features.GeoJson(
+#             data=shp_states[mask]['geometry'],
+#             style_function=lambda feature:
+#             {
+#                 'color': 'blue',
+#                 'weight': 2
+#             }
+#         )
+#         folium.Popup(f'{state}\n'
+#                      f'Number of Incidents: {df["estado"].value_counts()[state]}\n').add_to(info_state)
+#         info_state.add_to(map)
+
+# day_map = st_folium(fig=map, use_container_width=True)

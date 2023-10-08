@@ -3,3 +3,4 @@ folium
 pandas
 datetime
 geopandas
+plotly
