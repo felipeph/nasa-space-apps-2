@@ -1,5 +1,5 @@
 import streamlit as st
-import datetime
+from datetime import datetime
 import folium
 from folium.plugins import HeatMap
 import pandas as pd
@@ -28,22 +28,11 @@ BLUR = 1
 
 params = st.experimental_get_query_params()
 
-st.write(params)
+date_input = params["date"][0]
 
-today = datetime.datetime.now()
+date_obj = datetime.strptime(date_input, "%d/%m/%Y")
 
-interval = datetime.timedelta(days=30)
-
-first_day = today - interval
-
-st.title('Focos por dia')
-
-select_date = st.container()
-
-with select_date:
-    date = st.date_input('Escolha o Dia de Análise dos Focos', min_value=first_day, max_value=today)
-
-st.write(date)
+date = date_obj.strftime("%Y-%m-%d")
 
 
 df = load_date_csv(date)
