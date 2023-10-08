@@ -2,3 +2,4 @@ streamlit_folium
 folium
 pandas
 datetime
+geopandas
