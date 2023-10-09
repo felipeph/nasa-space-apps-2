@@ -54,6 +54,7 @@ with select_date:
         date = st.date_input('Select a date', min_value=first_day, max_value=today)
     except:
         today = today - timedelta(days=1)
+        first_day = today - interval
         date = st.date_input('Select a date', min_value=first_day, max_value=today)
 
 
