@@ -117,7 +117,7 @@ with tab_cities:
     
 df_county = df.groupby('municipio').size().reset_index(name='num_ocorrencias')
 
-st.write(df_county)
+# st.write(df_county)
 
 
 
