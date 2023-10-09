@@ -70,9 +70,9 @@ Plotly
 
 
 ## Screenshots
-![Home Screen](../../01-home.png)
-![Daily Brazil](02-daily_brazil.png)
-![Daily Choice State](02-daily_brazil.png)
+![Home Screen](screens/01-home.png)
+![Daily Brazil](screens/02-daily_brazil.png)
+![Daily Choice State](screens/02-daily_brazil.png)
 
 
 ## About the Team
