@@ -41,7 +41,7 @@ interval = timedelta(days=29)
 first_day = today - interval
 
 
-date = st.date_input('Select a date', min_value=first_day, max_value=today)
+date = st.date_input('Select a date', value=today)
 
 # Heatmap Configs
 radius = 2
