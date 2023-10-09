@@ -1,6 +1,6 @@
 # Project GeoGuardians
 <div style="text-align: center;">
-    <img src="logo-geoguardians.jpeg" alt="Home Screen" width="300">
+    <img src="screens/logo-geoguardians.jpeg" alt="Home Screen" width="300">
 </div>
 
 GeoGuardians is a mobile application developed to monitor and manage forest fires and water precipitation in Brazil. This innovative tool serves as a critical resource for both government agencies and concerned citizens, offering real-time data and insights to inform critical decisions related to wildfire prevention and response.
