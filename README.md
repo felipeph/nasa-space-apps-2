@@ -70,7 +70,7 @@ Plotly
 
 
 ## Screenshots
-![Home Screen](01-home.png)
+![Home Screen](../../01-home.png)
 ![Daily Brazil](02-daily_brazil.png)
 ![Daily Choice State](02-daily_brazil.png)
 
