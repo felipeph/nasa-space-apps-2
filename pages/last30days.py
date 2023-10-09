@@ -54,7 +54,7 @@ st.write(first_day)
 
 with select_date:
     try:
-        date = st.date_input('Select a date', min_value=first_day, max_value=today)
+        date = st.date_input('Select a date')
     except:
         today = today - timedelta(days=1)
         first_day = today - interval
