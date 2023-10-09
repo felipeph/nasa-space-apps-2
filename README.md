@@ -69,8 +69,22 @@ Plotly
 ![Flowchart](https://assets.spaceappschallenge.org/media/images/Flowchart_Nj1qTRv.width-1024.jpg)
 
 
+## About the Team
+It's getting more and more frequent to hear about wildfires in the world. Brazil is one of the leaders in wildfires incidents worldwide, especially in the region of the Amazon rainforest and in the Cerrado biome. Most of our team members have already heard about incidents nearby and never knew exactly what to do or what's being done about it.
+
+That inspired us into creating an application to better understand and solve this huge problem. We built an app that gathered information from satellites and people’s reports resulting on interactive map with location and statistics of fires.
+
+Where citizens are able to see the fires happening around the world and also report the ones that they are witnessing.
+
+Besides the civilian functions farmers also have their own type of account enabling them to order thermal cameras monitored by an AI that will alert them when a wild fire is starting in their propriety.
+
+All the fire stations are able to register in our platform and receive alerts when they are the closest to a fire that at least three people reported or when a satellite picks up on one.
+
+We’re ready to change the world. Are you ready to do it with us?
+
 ## Use of Artificial Intelligence
 We have used the site Ideogram for ilustrating the app and team's logo and https://firefly.adobe.com to get AI generated images to use as examples inside the app.
+
 
 ## Space Agency Data
 DataINPE - https://dataserver-coids.inpe.br/queimadas/queimadas/
@@ -107,3 +121,32 @@ AdobeFirefly - https://firefly.adobe.com/
 Figma - https://www.figma.com
 
 Miro - https://miro.com/
+
+## Team Contact Information
+Felipe Pereira
+
+E-mail: felipeph@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/felipeph/
+
+Paula Vargas
+
+E-mail: paulavargas-sm@hotmail.com
+
+LinkedIn: https://www.linkedin.com/in/pmvargas/
+
+Julia Alencar
+
+E-mail: julia.alencar@ufu.br
+
+Instagram: https://www.instagram.com/juliagabi_
+
+Carlos Aquino
+
+E-mail: carlosgraiaaquino@outlook.com
+
+LinkedIn: https://www.linkedin.com/in/carlosgraiaaquino/
+
+Guilherme Firmeza
+E-mail: gvfirmeza@gmail.com
+LinkedIn: https://www.linkedin.com/in/guilherme-firmeza/
