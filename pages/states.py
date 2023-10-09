@@ -36,8 +36,8 @@ timezone_brazil = pytz.timezone('America/Sao_Paulo')
 #params = st.experimental_get_query_params()
 #st.write(params)
 
-today = datetime.now(timezone_brazil)
-interval = timedelta(days=30)
+today = datetime.now(timezone_brazil) - timedelta(days=1)
+interval = timedelta(days=29)
 first_day = today - interval
 
 
