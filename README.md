@@ -70,10 +70,19 @@ Plotly
 
 
 ## Screenshots
-![Home Screen](screens/01-home.png)
 <img src="screens/01-home.png" alt="Home Screen" width="100">
-![Daily Brazil](screens/02-daily_brazil.png)
-![Daily Choice State](screens/02-daily_brazil.png)
+<img src="screens/02-daily_brazil.png" alt="Daily Brazil" width="100">
+<img src="screens/03-daily_choice_state.png" alt="Daily Brazil" width="100">
+<img src="screens/04-daily_rondonia.png" alt="Daily Brazil" width="100">
+<img src="screens/05-wildfire_by_states.png" alt="Daily Brazil" width="100">
+<img src="screens/06-stats_daily_choice_state.png" alt="Daily Brazil" width="100">
+<img src="screens/07-top-10-cities.png" alt="Daily Brazil" width="100">
+<img src="screens/08-profile.png" alt="Daily Brazil" width="100">
+<img src="screens/09-contact_autorities.png" alt="Daily Brazil" width="100">
+<img src="screens/10-update_info.png" alt="Daily Brazil" width="100">
+<img src="screens/11-team.png" alt="Daily Brazil" width="100">
+
+
 
 
 ## About the Team
