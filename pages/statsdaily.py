@@ -37,12 +37,12 @@ timezone_brazil = pytz.timezone('America/Sao_Paulo')
 #params = st.experimental_get_query_params()
 #st.write(params)
 
-today = datetime.now(timezone_brazil)
+today = datetime.now(timezone_brazil) - timedelta(days=1)
 interval = timedelta(days=30)
 first_day = today - interval
 
 
-date = st.date_input('Select a date', min_value=first_day, max_value=today)
+date = st.date_input('Select a date', value=today)
 
 # Heatmap Configs
 radius = 2
