@@ -49,8 +49,10 @@ st.markdown("""
 
 select_date = st.container()
 
+st.write(today)
+
 with select_date:
-    date = st.date_input('Select a date')
+    date = st.date_input('Select a date', value=today)
     # try:
     #     date = st.date_input('Select a date')
     # except:
