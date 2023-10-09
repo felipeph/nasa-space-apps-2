@@ -49,9 +49,6 @@ st.markdown("""
 
 select_date = st.container()
 
-st.write(today)
-st.write(first_day)
-
 with select_date:
     try:
         date = st.date_input('Select a date')
