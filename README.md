@@ -1,5 +1,7 @@
 # Project GeoGuardians
 
+
+
 GeoGuardians is a mobile application developed to monitor and manage forest fires and water precipitation in Brazil. This innovative tool serves as a critical resource for both government agencies and concerned citizens, offering real-time data and insights to inform critical decisions related to wildfire prevention and response.
 
 
@@ -65,3 +67,28 @@ Geopandas
 Plotly
 
 ![Flowchart](https://assets.spaceappschallenge.org/media/images/Flowchart_Nj1qTRv.width-1024.jpg)
+
+
+## Use of Artificial Intelligence
+We have used the site Ideogram for ilustrating the app and team's logo and https://firefly.adobe.com to get AI generated images to use as examples inside the app.
+
+## Space Agency Data
+DataINPE - https://dataserver-coids.inpe.br/queimadas/queimadas/
+NASAEarthData - https://worldview.earthdata.nasa.gov/
+ESAViewer - https://s3wfa.esa.int/viewer
+
+## References
+
+INPE - https://dataserver-coids.inpe.br/queimadas/queimadas/
+NASAEarthData - https://worldview.earthdata.nasa.gov/
+ESAViewer - https://s3wfa.esa.int/viewer
+INMET - https://portal.inmet.gov.br/dadoshistoricos
+PanoramaSIPAM - https://panorama.sipam.gov.br/painel-do-fogo/
+GlideApps - https://www.glideapps.com/
+Canva - http://www.canva.com/
+Capcut - https://www.capcut.com/
+ImagePexels_AuthorPixabay - https://www.pexels.com/pt-br/foto/floresta-em-chamas-51951/
+VideoPexels_AuthorArnavKainthola - https://www.pexels.com/video/wildfire-on-the-mountain-7543653/
+AdobeFirefly - https://firefly.adobe.com/
+Figma - https://www.figma.com
+Miro - https://miro.com/
