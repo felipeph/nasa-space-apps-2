@@ -50,12 +50,13 @@ st.markdown("""
 select_date = st.container()
 
 with select_date:
-    try:
-        date = st.date_input('Select a date')
-    except:
-        today = today - timedelta(days=1)
-        first_day = today - interval
-        date = st.date_input('Select a date', min_value=first_day, max_value=today)
+    date = st.date_input('Select a date')
+    # try:
+    #     date = st.date_input('Select a date')
+    # except:
+    #     today = today - timedelta(days=1)
+    #     first_day = today - interval
+    #     date = st.date_input('Select a date', min_value=first_day, max_value=today)
 
 
 df = load_date_csv(date)
