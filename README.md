@@ -71,6 +71,7 @@ Plotly
 
 ## Screenshots
 ![Home Screen](screens/01-home.png)
+<img src="screens/01-home.png" alt="Home Screen" width="100">
 ![Daily Brazil](screens/02-daily_brazil.png)
 ![Daily Choice State](screens/02-daily_brazil.png)
 
