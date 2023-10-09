@@ -69,6 +69,12 @@ Plotly
 ![Flowchart](https://assets.spaceappschallenge.org/media/images/Flowchart_Nj1qTRv.width-1024.jpg)
 
 
+## Screenshots
+![Home Screen](01-home.png)
+![Daily Brazil](02-daily_brazil.png)
+![Daily Choice State](02-daily_brazil.png)
+
+
 ## About the Team
 It's getting more and more frequent to hear about wildfires in the world. Brazil is one of the leaders in wildfires incidents worldwide, especially in the region of the Amazon rainforest and in the Cerrado biome. Most of our team members have already heard about incidents nearby and never knew exactly what to do or what's being done about it.
 
