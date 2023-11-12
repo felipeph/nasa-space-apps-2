@@ -1,6 +1,6 @@
-streamlit_folium
-folium
-pandas
+streamlit_folium==0.15.0
+folium==0.14.0
+pandas==1.5.0
 datetime
-geopandas
-plotly
+geopandas==0.14.0
+plotly==5.16.1

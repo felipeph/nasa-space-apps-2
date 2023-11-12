@@ -117,4 +117,4 @@ if marked_states:
                      f'Number of Incidents: {df["estado"].value_counts()[state]}\n').add_to(info_state)
         info_state.add_to(map)
 
-st_folium(fig=map, width=200, height=300)
+st_folium(fig=map, use_container_width=True)
